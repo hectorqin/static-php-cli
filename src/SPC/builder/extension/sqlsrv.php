@@ -36,7 +36,7 @@ class sqlsrv extends Extension
 
     public function patchBeforeMake(): bool
     {
-        $makefile = SOURCE_PATH . '\php-src\Makefile';
+        $makefile = SOURCE_PATH . '/php-src/Makefile';
         $makeContent = file_get_contents($makefile);
         $makeContent = preg_replace('/^(CFLAGS_(?:PDO_)?SQLSRV=.*?)\s+\/W4\b/m', '$1', $makeContent);
         $makeContent = preg_replace('/^(CFLAGS_(?:PDO_)?SQLSRV=.*?)\s+\/WX\b/m', '$1', $makeContent);

@@ -27,11 +27,11 @@ $test_os = [
     // 'macos-15', // bin/spc for arm64
     // 'ubuntu-latest', // bin/spc-alpine-docker for x86_64
     // 'ubuntu-22.04', // bin/spc-gnu-docker for x86_64
-    // 'ubuntu-24.04', // bin/spc for x86_64
+    'ubuntu-24.04', // bin/spc for x86_64
     // 'ubuntu-22.04-arm', // bin/spc-gnu-docker for arm64
     // 'ubuntu-24.04-arm', // bin/spc for arm64
     // 'windows-2022', // .\bin\spc.ps1
-    'windows-2025',
+    // 'windows-2025',
 ];
 
 // whether enable thread safe
@@ -50,7 +50,7 @@ $prefer_pre_built = false;
 
 // If you want to test your added extensions and libs, add below (comma separated, example `bcmath,openssl`).
 $extensions = match (PHP_OS_FAMILY) {
-    'Linux', 'Darwin' => 'zlib',
+    'Linux', 'Darwin' => 'sqlsrv,pdo_sqlsrv',
     'Windows' => 'amqp,apcu,bcmath,bz2,calendar,ctype,curl,dba,dom,ds,exif,ffi,fileinfo,filter,ftp,gd,iconv,igbinary,libxml,mbregex,mbstring,mysqli,mysqlnd,opcache,openssl,pdo,pdo_mysql,pdo_sqlite,pdo_sqlsrv,phar,rar,redis,session,shmop,simdjson,simplexml,soap,sockets,sqlite3,sqlsrv,ssh2,sysvshm,tokenizer,xml,xmlreader,xmlwriter,yac,yaml,zip,zlib',
 };
 
@@ -66,7 +66,7 @@ $with_suggested_libs = true;
 
 // If you want to test extra libs for extensions, add them below (comma separated, example `libwebp,libavif`). Unnecessary, when $with_suggested_libs is true.
 $with_libs = match (PHP_OS_FAMILY) {
-    'Linux', 'Darwin' => 'libjpeg',
+    'Linux', 'Darwin' => '',
     'Windows' => '',
 };
 
