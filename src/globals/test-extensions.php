@@ -66,7 +66,7 @@ $with_suggested_libs = true;
 
 // If you want to test extra libs for extensions, add them below (comma separated, example `libwebp,libavif`). Unnecessary, when $with_suggested_libs is true.
 $with_libs = match (PHP_OS_FAMILY) {
-    'Linux', 'Darwin' => 'krb5,libiouring',
+    'Linux', 'Darwin' => 'krb5',
     'Windows' => '',
 };
 
