@@ -94,6 +94,15 @@
             "path": "LICENSE"
         }
     },
+    "deepclone": {
+        "type": "ghtagtar",
+        "repo": "symfony/php-ext-deepclone",
+        "path": "php-src/ext/deepclone",
+        "license": {
+            "type": "file",
+            "path": "LICENSE"
+        }
+    },
     "dio": {
         "type": "url",
         "url": "https://pecl.php.net/get/dio",

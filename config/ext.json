@@ -81,6 +81,10 @@
         "lib-depends": [
             "libmpdec"
         ]
+    "deepclone": {
+        "type": "external",
+        "source": "deepclone",
+        "arg-type": "enable"
     },
     "dio": {
         "support": {
