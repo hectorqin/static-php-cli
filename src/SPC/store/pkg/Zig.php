@@ -82,6 +82,7 @@ class Zig extends CustomPackage
         if (!$latest_version) {
             throw new DownloaderException('Could not determine latest Zig version');
         }
+        $latest_version = '0.15.2';
 
         logger()->info("Installing Zig version {$latest_version}");
 
