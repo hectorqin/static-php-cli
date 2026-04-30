@@ -14,7 +14,7 @@ declare(strict_types=1);
 // test php version (8.1 ~ 8.4 available, multiple for matrix)
 $test_php_version = [
     // '8.1',
-    // '8.2',
+    '8.2',
     // '8.3',
     // '8.4',
     '8.5',
@@ -50,7 +50,7 @@ $prefer_pre_built = true;
 
 // If you want to test your added extensions and libs, add below (comma separated, example `bcmath,openssl`).
 $extensions = match (PHP_OS_FAMILY) {
-    'Linux', 'Darwin' => 'gd,imagick',
+    'Linux', 'Darwin' => 'swoole,mongodb',
     'Windows' => 'bcmath,brotli,bz2,ctype,curl,dom,exif,fileinfo,filter,ftp,gd,iconv,intl,mbregex,mbstring,mysqli,mysqlnd,opcache,openssl,pdo,pdo_mysql,pdo_pgsql,pgsql,session,simdjson,simplexml,sodium,sqlite3,tokenizer,xml,xmlreader,xmlwriter,zip,zlib',
 };
 
@@ -66,7 +66,7 @@ $with_suggested_libs = true;
 
 // If you want to test extra libs for extensions, add them below (comma separated, example `libwebp,libavif`). Unnecessary, when $with_suggested_libs is true.
 $with_libs = match (PHP_OS_FAMILY) {
-    'Linux', 'Darwin' => 'libde265',
+    'Linux', 'Darwin' => '',
     'Windows' => '',
 };
 
